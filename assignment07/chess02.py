@@ -3,7 +3,7 @@ import time
 
 my_compute_time = 0.1
 opponent_compute_time = 0.5
-opponnents = 24
+opponnents = 15
 move_pairs = 30
 
 #don't forget to declare the main() dunc as a async func
