@@ -6,11 +6,13 @@ import asyncio
 async def producer(queue):
     print('Producer: Running')
     # generate work
+    total_time = 0 
     for i in range(10):
         # generate a value
         value = i
         # block to simulate work
-        sleeptime = random()
+        sleeptime = 1
+        total_time += sleeptime
         print(f"> Producer {value} sleep {sleeptime}")
         await asyncio.sleep(sleeptime)
         # add to the queue
@@ -19,7 +21,8 @@ async def producer(queue):
     # send an all done signal
     await queue.put(None)
     print('Producer: Done')
- 
+    print(f'Total time Producer done: {total_time}')
+
 # coroutine to consume work
 async def consumer(queue):
     print('Consumer: Running')
