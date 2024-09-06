@@ -9,13 +9,8 @@ from random import randrange
 # which represents the time required for checking out the product.
 class Product:
     def __init__(self, product_name: str, checkout_time: float):
-
-
-
 class Customer:
-    def __init__(self, customer_id: int, products: list[Product]):
-
-
+    def __init__(self, customer_id: int, products: list[Product]):   
 
 # we implement a checkout_customer method that acts as a consumer.
 # As long as there is data in the queue, this method will continue to loop. 
@@ -29,7 +24,7 @@ class Customer:
 # After finishing processing the data, 
 # we use queue.task_done() to tell the queue that the data has been successfully processed.
 async def checkout_customer(queue: Queue, cashier_number: int):
-    while not queue.empty():
+    while not queue.empty():       
 
 
 
